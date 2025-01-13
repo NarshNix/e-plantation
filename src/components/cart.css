@@ -1,0 +1,31 @@
+/* cart.css */
+.cart {
+  max-width: 80%;
+  margin: auto;
+  overflow-x: auto; /* Enable horizontal scroll if needed */
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem; /* Add spacing between elements */
+}
+
+.cart-item-info img {
+  width: 150px; /* Adjust as needed */
+  height: auto;
+  border-radius: 5px;
+}
+
+.quantity-control {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
