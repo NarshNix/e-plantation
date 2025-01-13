@@ -1,6 +1,10 @@
 import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
+
+import "./mainnavigation.css";
 
 export default function MainNavigation() {
+  const cart = useSelector((state) => state.cart);
   return (
     <nav className="navigation">
       <div className="nav-right">
@@ -14,6 +18,13 @@ export default function MainNavigation() {
       </div>
       <div className="nav-left">
         <NavLink to="/product">Products</NavLink>
+
+        <div className="cart-item">
+          <NavLink to="/cart">
+            <i class="fa-solid fa-cart-shopping logo"></i>
+            <span>{cart.length > 0 && cart.length}</span>
+          </NavLink>
+        </div>
       </div>
     </nav>
   );
